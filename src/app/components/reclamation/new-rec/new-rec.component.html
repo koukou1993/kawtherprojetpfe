@@ -1,0 +1,157 @@
+<!-- Advanced legend -->
+<div class="card">
+    <div class="card-header header-elements-inline">
+        <h5 class="card-title">New Reclamation</h5>
+        <div class="header-elements">
+            <div class="list-icons">
+                <a class="list-icons-item" data-action="collapse"></a>
+                <a class="list-icons-item" data-action="reload"></a>
+                <a class="list-icons-item" data-action="remove"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <form #addreclamationForm='ngForm' (ngSubmit)='addReclamation()'>
+         <!--   <fieldset>
+                <legend class="font-weight-semibold text-uppercase font-size-sm">
+                    <i class="icon-reading mr-2"></i>
+                    Enter your information
+                    <a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo1">
+                        <i class="icon-circle-down2"></i>
+                    </a>
+                </legend>
+
+                <div class="collapse show" id="demo1">
+                    <div class="form-group">
+                        <label>société:</label>
+                        <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.societe' placeholder="nom de société">
+                    </div>
+                    <div class="form-group">
+                        <label>Enter your name:</label>
+                        <input type="text"  [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.fullName' class="form-control" placeholder="Eugene Kopyov">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Enter your Email:</label>
+                        <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.email' class="form-control" placeholder="Your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Entrer your Phone:</label>
+                        <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.phone' class="form-control" placeholder="Your phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Entrer your Address:</label>
+                        <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.address' class="form-control" placeholder="Your Address">
+                    </div>
+                   
+                   
+                </div>
+            </fieldset> -->
+
+            <fieldset>
+                <legend class="font-weight-semibold text-uppercase font-size-sm">
+                    <i class="icon-reading mr-2"></i>
+                    Enter Product Details
+                    <a href="#" class="float-right text-default" data-toggle="collapse" data-target="#demo2">
+                        <i class="icon-circle-down2"></i>
+                    </a>
+                </legend>
+                	
+                <div class="collapse show" id="demo2">
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-2">Numero de bon de livraison<span class="text-danger">*</span></label>
+                        <div class="col-lg-10">
+                            <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.numbonlivraison' class="form-control"  placeholder="Numro de bon de livraison">
+                        </div>
+                    </div>
+                    
+                   
+        <!---- <div class="form-group row">
+                        <label class="col-form-label col-md-2">Date de réception</label>
+                        <div class="col-md-10">
+                            <input class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.dateReception' type="datetime-local" name="datetime-local">
+                            <span class="form-text text-muted"> <code>Entrer la Date de Reception du Produit </code></span>
+                        </div>
+                    </div>-->
+                    </div>
+
+
+            </fieldset>
+        
+            <fieldset>
+                <legend class="font-weight-semibold text-uppercase font-size-sm">
+                    <i class="icon-file-text2 mr-2 "></i>
+                    Add Reclamation details
+                    <a class="float-right text-default" data-toggle="collapse" data-target="#demo3">
+                        <i class="icon-circle-down2"></i>
+                    </a>
+                </legend>
+                <div class="collapse show" id="demo3">
+
+                <div class="form-group">
+                   
+                    <!-- Reset button --
+                    <form class="input-group"  id="multiselect-reset-form">
+                       <select id="objetreclamation" formControlName="objetreclamation"  class="form-control">
+                            
+                            <option *ngFor="let option of objetreclamation" 
+                            [ngValue]="option">{{option?.objetreclamation}}
+                        </option>
+                      </select>
+
+                       <div class="input-group-append">
+                           <button type="reset" class="btn bg-blue">Reset</button>
+                        </div>
+                 </form>
+
+                     <!-- /reset button -->
+
+                     
+                 </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-2">Objet Reclamation<span class="text-danger">*</span></label>
+                    <div class="col-lg-10">
+                        <select  id="objetreclamation"  [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.objetreclamation' data-placeholder="Select Objet Reclamation" class="form-control">
+                            
+                            <option *ngFor="let option of objetreclamation" 
+                            [ngValue]="option">{{option?.objetreclamation}}
+                        </option>
+                        </select>
+                    </div>
+                </div>
+             
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-2">Description Reclamation</label>
+                        <div class="col-lg-10">
+                            <textarea rows="3" cols="5" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.description' class="form-control" placeholder="Entrer votre message ici..."></textarea>
+                            <span class="form-text text-muted">Conditions de survenue : (Comment l’avez-vous découvert ? En faisant quoi ? A quel moment ?…)
+                            </span>
+                        </div>
+                    </div>
+
+               
+                    
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-2">pièce jointe justificatifs</label>
+                        <div class="col-lg-10">
+                            <input type="file" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.piecejoint' class="form-control h-auto">  
+                            <span class="form-text text-muted">Accepted formats: pdf, doc. Max file size 2Mb</span>
+      
+                        </div>
+                    </div>
+                
+                    
+                </div> 
+            </fieldset>
+
+            <div class="text-right">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Annuler</button>
+                <button type="submit" class="btn btn-primary">Envoyer <i class="icon-paperplane ml-2"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- /advanced legend -->

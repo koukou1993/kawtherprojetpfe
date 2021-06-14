@@ -1,0 +1,40 @@
+<!-- Column selectors -->
+<div class="card">
+    <div class="card-header header-elements-inline">
+        <h5 class="card-title">List of Clients</h5>
+        <div class="header-elements">
+            <div class="list-icons">
+                <a class="list-icons-item" data-action="collapse"></a>
+                <a class="list-icons-item" data-action="reload"></a>
+                <a class="list-icons-item" data-action="remove"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+    </div>
+
+    <table class="table datatable-button-html5-columns">
+        <thead>
+            <tr>
+                <td>#</td>
+            <td>Full Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Address</td>
+          
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let c of client; let i=index'>
+                <td>{{c.id }}</td>
+                <td>{{c.name }}</td>
+                <td>{{c.email }}</td>
+                <td>{{c.phone }}</td>
+                <td>{{c.address }}</td>
+               
+            </tr>
+          
+        </tbody>
+    </table>
+</div>

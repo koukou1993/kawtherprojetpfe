@@ -1,0 +1,299 @@
+<!-- Main navbar -->
+<app-navbar></app-navbar>
+<!-- /main navbar -->
+
+
+<!-- Page content -->
+<div class="page-content">
+
+    <!-- Main sidebar -->
+   <div class="sidebar sidebar-dark sidebar-main sidebar-fixed sidebar-expand-md">
+
+    <!-- Sidebar mobile toggler -->
+    <div class="sidebar-mobile-toggler text-center">
+        <a href="#" class="sidebar-mobile-main-toggle">
+            <i class="icon-arrow-left8"></i>
+        </a>
+        Navigation
+        <a href="#" class="sidebar-mobile-expand">
+            <i class="icon-screen-full"></i>
+            <i class="icon-screen-normal"></i>
+        </a>
+    </div>
+    <!-- /sidebar mobile toggler -->
+
+
+    <!-- Sidebar content -->
+    <div class="sidebar-content">
+
+        <!-- User menu -->
+        <div class="sidebar-user">
+            <div class="card-body">
+                <div class="media">
+                    <div class="mr-3">
+                        <a href="#"><img src="assets/global_assets/images/placeholders/placeholder.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+                    </div>
+
+                    <div class="media-body">
+                        <div class="media-title font-weight-semibold">Victoria Baker</div>
+                        <div class="font-size-xs opacity-50">
+                            <i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA
+                        </div>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <a href="#" class="text-white"><i class="icon-cog3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /user menu -->
+
+
+        <!-- Main navigation -->
+        <div class="card card-sidebar-mobile">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+                <!-- Main -->
+                <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="icon-home4"></i>
+                        <span>
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-user-tie"></i> <span>Employees</span></a>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="Employees">
+                        <li class="nav-item"><a routerLink="/employee" class="nav-link active">Manage Employees</a></li>
+                        <li class="nav-item"><a routerLink="/list-employees" class="nav-link">List Employees</a></li>
+                      <!--  <li class="nav-item"><a href="../../../../layout_3/LTR/default/full/index.html" class="nav-link">Layout 3</a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-user"></i> <span>clients</span></a>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="clients">
+                        <li class="nav-item"><a routerLink="/client" class="nav-link active">Manage Client</a></li>
+                        <li class="nav-item"><a routerLink="/clients-list" class="nav-link">List Clients</a></li>
+                      <!--  <li class="nav-item"><a href="../../../LTR/dark/full/index.html" class="nav-link disabled">Dark <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
+                        <li class="nav-item"><a href="../../../LTR/clean/full/index.html" class="nav-link disabled">Clean <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li> -->
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/service" class="nav-link"><i class="icon-cogs"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li class="nav-item"><a routerLink="/role" class="nav-link"><i class="icon-puzzle2"></i> 
+                    <span>Role</span>
+                     </a></li>
+
+                     <li class="nav-item"><a routerLink="/type-reclamation" class="nav-link"><i class="icon-list-unordered"></i> 
+                        <span>Types Reclamation</span>
+                         </a></li>
+                      <!--
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-stack"></i> <span>Starter kit</span></a>
+                  
+                    <ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+                        <li class="nav-item"><a href="../seed/layout_nav_horizontal.html" class="nav-link">Horizontal navigation</a></li>
+                        <li class="nav-item"><a href="../seed/sidebar_none.html" class="nav-link">No sidebar</a></li>
+                        <li class="nav-item"><a href="../seed/sidebar_main.html" class="nav-link">1 sidebar</a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">2 sidebars</a>
+                            <ul class="nav nav-group-sub">
+                                <li class="nav-item"><a href="../seed/sidebar_secondary.html" class="nav-link">Secondary sidebar</a></li>
+                                <li class="nav-item"><a href="../seed/sidebar_right.html" class="nav-link">Right sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">3 sidebars</a>
+                            <ul class="nav nav-group-sub">
+                                <li class="nav-item"><a href="../seed/sidebar_right_hidden.html" class="nav-link">Right sidebar hidden</a></li>
+                                <li class="nav-item"><a href="../seed/sidebar_right_visible.html" class="nav-link">Right sidebar visible</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Content sidebars</a>
+                            <ul class="nav nav-group-sub">
+                                <li class="nav-item"><a href="../seed/sidebar_content_left.html" class="nav-link">Left sidebar</a></li>
+                                <li class="nav-item"><a href="../seed/sidebar_content_right.html" class="nav-link">Right sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="../seed/layout_boxed.html" class="nav-link">Boxed layout</a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="../seed/navbar_fixed_main.html" class="nav-link">Fixed main navbar</a></li>
+                        <li class="nav-item"><a href="../seed/navbar_fixed_secondary.html" class="nav-link">Fixed secondary navbar</a></li>
+                        <li class="nav-item"><a href="../seed/navbar_fixed_both.html" class="nav-link">Both navbars fixed</a></li>
+                        <li class="nav-item"><a href="../seed/layout_fixed.html" class="nav-link">Fixed layout</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/client" class="nav-link">
+                        <i class="icon-list-unordered"></i>
+                        <span>Changelog</span>
+                        <span class="badge bg-blue-400 align-self-center ml-auto">2.2</span>
+                    </a>
+                </li>
+                <li class="nav-item"><a href="../../../RTL/default/full/index.html" class="nav-link"><i class="icon-width"></i> <span>RTL version</span></a></li>
+                <!-- /main -->
+
+                <!-- Forms -->
+                <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Reclamation</div> <i class="icon-menu" title="Forms"></i></li>
+
+                <li class="nav-item">
+                    <a routerLink="/new-rec" class="nav-link"><i class="icon-file-plus"></i>
+                        <span>New Reclamation </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/gerer-rec-client" class="nav-link"><i class="icon-list-ordered"></i>
+                        <span>list Reclamation </span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Profil</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Profil">
+                        <li class="nav-item"><a routerLink="/client-profil" class="nav-link">Client Profil</a></li>
+                      <li class="nav-item"><a routerLink="/assistant-profil" class="nav-link">assistant Profil</a></li>
+                      <li class="nav-item"><a  routerLink="/intervenant-profil" class="nav-link">intervenant Profil </a></li>
+                      <!--    <li class="nav-item"><a href="form_multiselect.html" class="nav-link">Bootstrap multiselect</a></li>
+                        <li class="nav-item"><a href="form_input_groups.html" class="nav-link">Input groups</a></li>
+                        <li class="nav-item"><a href="form_controls_extended.html" class="nav-link">Extended controls</a></li>
+                        <li class="nav-item"><a href="form_floating_labels.html" class="nav-link">Floating labels</a></li>
+                        <li class="nav-item"><a href="form_tag_inputs.html" class="nav-link">Tag inputs</a></li>
+                        <li class="nav-item"><a href="form_dual_listboxes.html" class="nav-link">Dual Listboxes</a></li>
+                        <li class="nav-item"><a href="form_validation.html" class="nav-link">Validation</a></li>
+                        <li class="nav-item"><a href="form_wizard.html" class="nav-link">Form wizard</a></li>
+                        <li class="nav-item"><a href="form_actions.html" class="nav-link">Form actions</a></li>
+                        <li class="nav-item"><a href="form_inputs_grid.html" class="nav-link">Inputs grid</a></li> -->  
+                    </ul>
+                </li>
+                <!-- -->
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-file-css"></i> <span>Assitant</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Assistant">
+                        <li class="nav-item"><a href="alpaca_basic.html" class="nav-link">New Reclamation</a></li>
+                        <li class="nav-item"><a href="alpaca_advanced.html" class="nav-link">Advanced inputs</a></li>
+                        <li class="nav-item"><a href="alpaca_controls.html" class="nav-link">Controls</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-spell-check"></i> <span>Text editors</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Text editors">
+                        <li class="nav-item"><a href="editor_summernote.html" class="nav-link">Summernote editor</a></li>
+                        <li class="nav-item"><a href="editor_ckeditor.html" class="nav-link">CKEditor</a></li>
+                        <li class="nav-item"><a href="editor_trumbowyg.html" class="nav-link">Trumbowyg editor</a></li>
+                        <li class="nav-item"><a href="editor_code.html" class="nav-link">Code editor</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-select2"></i> <span>Pickers</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Pickers">
+                        <li class="nav-item"><a href="picker_date.html" class="nav-link">Date &amp; time pickers</a></li>
+                        <li class="nav-item"><a href="picker_color.html" class="nav-link">Color pickers</a></li>
+                        <li class="nav-item"><a href="picker_location.html" class="nav-link">Location pickers</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-insert-template"></i> <span>Form layouts</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Form layouts">
+                        <li class="nav-item"><a href="form_layout_vertical.html" class="nav-link">Vertical form</a></li>
+                        <li class="nav-item"><a href="form_layout_vertical_styled.html" class="nav-link disabled">Custom styles <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
+                        <li class="nav-item-divider"></li>
+                        <li class="nav-item"><a href="form_layout_horizontal.html" class="nav-link">Horizontal form</a></li>
+                        <li class="nav-item"><a href="form_layout_horizontal_styled.html" class="nav-link disabled">Custom styles <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
+                    </ul>
+                </li>
+                <!-- /forms -->
+
+                
+
+               
+
+                
+
+             
+
+
+ 
+
+            </ul>
+        </div>
+        <!-- /main navigation -->
+
+    </div>
+    <!-- /sidebar content -->
+    
+</div>
+    <!-- /main sidebar -->
+
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+ 	<!-- Page header -->
+     <div class="page-header page-header-light">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Starters</span> - Fixed Layout</h4>
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+            <div class="header-elements d-none">
+                <a href="#" class="btn btn-labeled btn-labeled-right bg-primary">Button <b><i class="icon-menu7"></i></b></a>
+            </div>
+        </div>
+
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <a href="#" class="breadcrumb-item">Link</a>
+                    <span class="breadcrumb-item active">Current</span>
+                </div>
+
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+
+            <div class="header-elements d-none">
+                <div class="breadcrumb justify-content-center">
+                    <a href="#" class="breadcrumb-elements-item">
+                        Link
+                    </a>
+
+                    <div class="breadcrumb-elements-item dropdown p-0">
+                        <a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item">Action</a>
+                            <a href="#" class="dropdown-item">Another action</a>
+                            <a href="#" class="dropdown-item">One more action</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Separate action</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header -->
+
+<div class="content">
+     <router-outlet></router-outlet>
+    </div>
+
+
+        <!-- Footer -->
+       <app-footer></app-footer>
+        <!-- /footer -->
+
+    </div>
+    <!-- /main content -->
+
+</div>

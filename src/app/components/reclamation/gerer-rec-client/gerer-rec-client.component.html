@@ -1,0 +1,182 @@
+<!-- Striped rows -->
+<div class="card">
+    <div class="card-header header-elements-inline">
+        <h5 class="card-title"><strong>Listes des réclamations Client</strong></h5>
+        <div class="header-elements">
+            <div class="list-icons">
+                <a class="list-icons-item" data-action="collapse"></a>
+                <a class="list-icons-item" data-action="reload"></a>
+                <a class="list-icons-item" data-action="remove"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+    
+    </div>
+
+    <table class="table datatable-basic table-striped">
+        <thead>
+            <tr>
+                <th>N° Reclamation</th>
+                <th>Numero de bon de Livraison</th>
+                <th>objet Reclamation </th>
+                <th>Created At</th>  
+                <th>etat</th>
+                <th>Updated At</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor= 'let r of reclamation; let i=index'>
+                <td>{{r.id}}</td>
+                <td>{{r.numbonlivraison}}</td>
+                <td>{{r.objetreclamation?.objetreclamation }}</td>
+                <td><a href="#">{{r.createdAt}}</a></td>
+               
+                <td><span class="badge badge-secondary">{{r.etat}}</span></td>
+                <td><a href="#">{{r.updatedAt}}</a></td>
+               <!-- <td><span class="badge badge-secondary">en cours</span></td> -->
+                <td class="text-center">
+                    <div class="list-icons">
+                        <div class="dropdown">
+                            <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                <i class="icon-menu9"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#VoirReclamationModal" data-toggle="modal"  role="button" class="dropdown-item"><i class="icon-eye"></i> voir</a>
+
+                                <a href="#EditReclamationModal" data-toggle="modal" role="button" (click)="moveDataToModifForm(i)" class="dropdown-item"><i class="icon-pencil7"></i> Modifier</a>
+                                <a href="#AnnuleReclamationModal" data-toggle="modal" role="button" (click)="moveDataToModifForm(i)" class="dropdown-item"><i class="icon-x"></i> Annuler</a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+<!-- /striped rows -->
+
+
+
+
+
+
+
+
+  <!-- Horizontal form modal -->
+  <div id="EditReclamationModal" class="modal fade" tabindex="-1" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Reclamation N°   </h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <form [formGroup]="editReclamationForm" class="form-horizontal">
+                <div class="modal-body">
+
+               
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-3">Numero de bon de livraison :</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="refcmd"  id="numbonlivraison" formControlName="numbonlivraison" placeholder="Numero de bon de Livraison" class="form-control">
+                        </div>
+                    </div>
+
+               
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-3">Objet de la réclamation :</label>
+                            <div class="col-sm-9">
+                                <select name="objetreclamation" id="objetreclamation" formControlName="objetreclamation" class="form-control">
+                                    <option value="">select objet reclamation</option>
+                                    <option *ngFor="let option of objetreclamation" 
+                                    [ngValue]="option">{{option?.objetreclamation}}
+                                </option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                      
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-3">Description de la réclamation :</label>
+                            <div class="col-sm-9">
+                                <textarea rows="5" cols="5" name="description" id="description" formControlName="description" placeholder="Enter your message here..." class="form-control"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-lg-2">pièce jointe justificatifs</label>
+                            <div class="col-lg-10">
+                                <input type="file" [ngModelOptions]="{standalone: true}" [(ngModel)]='reclamation.piecejoint' class="form-control">  
+                                <span class="form-text text-muted">Accepted formats: pdf, doc. Max file size 2Mb</span>
+          
+                            </div>
+                        </div>
+                    <!--    <div class="form-group row">
+                            <label class="col-form-label col-lg-2">etat<span class="text-danger">*</span></label>
+                            <div class="col-lg-10">
+                                <input type="text" name="etat"  id="etat" formControlName="etat" class="form-control"  placeholder="etat">
+                            </div>
+                        </div> -->
+                       
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-3">Date d'ajout reclamation</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="icon-calendar"></i>
+                                        </span>
+                                    </span>
+                                    <input type="text" name="createdAt"  id="createdAt" formControlName="createdAt"  class="form-control datepicker-icon rounded-right" placeholder="Pick a date&hellip;">
+                                </div>                            </div>
+                        </div>
+                        
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" id="close-edit-modal" class="btn btn-link" data-dismiss="modal">Close</button>
+                    <button type="submit" (click)="editReclamation(idEdit)" class="btn bg-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /horizontal form modal -->
+<!-- Mini modal -->
+<div id="AnnuleReclamationModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Annuler une Reclamation</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <h6 class="font-weight-semibold">Motif d'annulation</h6>
+                <form [formGroup]="editReclamationForm">
+                    
+                            
+      <textarea rows="5" cols="5" name="motif" id="motif" formControlName="motif" placeholder="Enter your message here..." class="form-control"></textarea>
+                 
+                
+                   
+                   
+                </form>
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                <button type="button" (click)="editReclamation(idEdit)" class="btn bg-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /mini modal -->

@@ -1,0 +1,50 @@
+<div class="col-md-8">
+
+    <!-- Custom handle -->
+    <div class="card">
+        <div class="card-header header-elements-inline">
+            <h5 class="card-title">Liste Employees</h5>
+            <div class="header-elements">
+                <div class="list-icons">
+                    <a class="list-icons-item" data-action="collapse"></a>
+                    <a class="list-icons-item" data-action="reload"></a>
+                    <a class="list-icons-item" data-action="remove"></a>
+                </div>
+            </div>
+        </div>
+
+        <ul class="media-list media-list-linked" >
+            <li class="media font-weight-semibold border-0 py-1" *ngFor= 'let e of employee; let i=index' >Liste Employees</li>
+
+        
+
+            <li>
+                <div class="media">
+                    <div class="mr-3"><img src="assets/global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt=""></div>
+                    <div class="media-body">
+                        <div class="media-title font-weight-semibold">{{e.name}}</div>
+                        <span class="text-muted">{{e.typeservice?.typeservice}}</span>
+                    </div>
+            
+                    <div class="align-self-center ml-3">
+                        <a href="#" class="text-default" data-toggle="collapse" data-target="#vanessa2">
+                            <i class="icon-menu7"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="collapse" id="vanessa2">
+                    <div class="card-body bg-light border-top border-bottom">
+                        <ul class="list list-unstyled mb-0">
+                            
+                            <li><i class="icon-user-tie mr-2"></i> {{r.role}}</li>
+                            <li><i class="icon-phone mr-2"></i> {{e.phone}}</li>
+                            <li><i class="icon-mail5 mr-2"></i> <a href="#">{{e.email}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /custom handle -->
+    </div>

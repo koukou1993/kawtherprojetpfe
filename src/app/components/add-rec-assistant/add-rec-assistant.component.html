@@ -1,0 +1,87 @@
+
+
+<!-- Centered forms -->
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="header-elements-inline">
+                            <h5 class="card-title">New Reclamation</h5>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                    <a class="list-icons-item" data-action="remove"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row" >
+                    <div class="col-md-10 offset-md-1">
+                        <form [formGroup]="addReclamationForm">
+
+                            <div class="form-group">
+                                <label>Client<span class="text-danger">*</span></label>
+                               
+                                    <select id="client" formControlName="client" data-placeholder="Select Client" class="form-control">
+                                        
+                                        <option *ngFor="let option of client" 
+                                        [ngValue]="option">{{option?.client}}
+                                    </option>
+                                    </select>
+                               
+                            </div>
+                            
+
+                            <div class="form-group">
+                                <label>Numero de bon de livraison</label>
+                                <input type="text"   id="numbonlivraison"  formControlName="numbonlivraison"
+                                class="form-control"  placeholder="Numero de bon de livraison">
+                            </div>
+             
+                            <div class="form-group">
+                                <label>Objet Reclamation<span class="text-danger">*</span></label>
+                               
+                                    <select  id="objetreclamation"  formControlName="objetreclamation" data-placeholder="Select Objet Reclamation" class="form-control">
+                                        
+                                        <option *ngFor="let option of objetreclamation" 
+                                        [ngValue]="option">{{option?.objetreclamation}}
+                                    </option>
+                                    </select>
+                               
+                            </div>
+                           
+                            
+                            <div class="form-group">
+                                <label>Description</label>
+                                <div>
+                                    <textarea rows="5" cols="5"  id="description" formControlName="description" class="form-control" placeholder="Entrer votre message ici..."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>pièce jointe justificatifs</label>
+                                <div>
+                                    <input type="file" id="piecejoint"  formControlName="piecejoint" class="form-control h-auto">        
+                                </div>
+                            </div>
+                            
+                           
+                            <div class="text-right">
+                                <button type="submit" [disabled]="addReclamationForm.invalid" (click)="addReclamation()" class="btn btn-primary">Envoyer<i class="icon-paperplane ml-2"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+<!-- /form centered -->

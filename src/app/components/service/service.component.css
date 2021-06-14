@@ -1,0 +1,178 @@
+
+body {
+    color: #404E67;
+    background: #F5F7FA;
+    font-family: 'Open Sans', sans-serif;
+}
+.table-wrapper {
+    width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;	
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+.table-title .add-new {
+    float: right;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+}
+.table-title .add-new i {
+    margin-right: 4px;
+}
+table.table {
+    table-layout: fixed;
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table th:last-child {
+    width: 100px;
+}
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}    
+table.table td a.add {
+    color: #27C46B;
+}
+table.table td a.edit {
+    color: #FFC107;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
+}    
+table.table .form-control {
+    height: 32px;
+    line-height: 32px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+table.table .form-control.error {
+    border-color: #f50000;
+}
+table.table td .add {
+    display: none;
+}
+
+.modal-login {
+	width: 350px;
+}
+.modal-login .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-login .modal-header {
+	border-bottom: none;
+	position: relative;
+	justify-content: center;
+}
+.modal-login .close {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+.modal-login h4 {
+	color: #636363;
+	text-align: center;
+	font-size: 26px;
+	margin-top: 0;
+}
+.modal-login .modal-content {
+	color: #999;
+	border-radius: 1px;
+	margin-bottom: 15px;
+	background: #fff;
+	border: 1px solid #f3f3f3;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 25px;
+}
+.modal-login .form-group {
+	margin-bottom: 20px;
+}
+.modal-login label {
+	font-weight: normal;
+	font-size: 13px;
+}
+.modal-login .form-control {
+	min-height: 38px;
+	padding-left: 5px;
+	box-shadow: none !important;
+	border-width: 0 0 1px 0;
+	border-radius: 0;
+}
+.modal-login .form-control:focus {
+	border-color: #ccc;
+}
+.modal-login .input-group-addon {
+	max-width: 42px;
+	text-align: center;
+	background: none;
+	border-bottom: 1px solid #ced4da;
+	padding-right: 5px;
+	border-radius: 0;
+}
+
+
+.modal-login .hint-text {
+	text-align: center;
+	padding-top: 5px;
+	font-size: 13px;
+}
+.modal-login .modal-footer {
+	color: #999;
+	border-color: #dee4e7;
+	text-align: center;
+	margin: 0 -25px -25px;
+	font-size: 13px;
+	justify-content: center;
+}
+.modal-login a {
+	color: #fff;
+	text-decoration: underline;
+}
+.modal-login a:hover {
+	text-decoration: none;
+}
+.modal-login a {
+	color: #19aa8d;
+	text-decoration: none;
+}	
+.modal-login a:hover {
+	text-decoration: underline;
+}
+.modal-login .fa {
+	font-size: 21px;
+	position: relative;
+	top: 6px;
+}
+
